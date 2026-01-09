@@ -10,7 +10,9 @@ Exclusive accesses are not supported
 
 
 ////////////////////////////////////////////////////////////////////
+<rd>
 AXI4-Lite Read Transaction
+<rd>
 Below, the sequence for an AXI4-Lite read is shown:
 
 In addition to putting an address on the Read Address channel, the Master also asserts that the address is valid (ARVALID) and that it is prepared to accept data from the slave (READY).
@@ -19,7 +21,9 @@ Since both ARVALID and ARREADY are asserted, the handshake takes place on the su
 The required data is sent to the Read Data channel by the Slave, who then asserts RVALID to show that the data in the channel is legitimate. It is also possible for the slave to respond on RRESP, but this does not happen in this case.
 The transaction is finished on the subsequent rising clock edge since both RREADY and RVALID are asserted. At this point, RREADY and RVALID can be released.
 ///////////////////////////////////////////////////////////////////////
+<rd>
 AXI4-Lite Write Transaction
+<rd>
 Below, the sequence for an AXI4-Lite write is shown:
 
 A description of the events in figure 4 follows:
